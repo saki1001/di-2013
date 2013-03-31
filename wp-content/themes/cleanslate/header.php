@@ -47,17 +47,6 @@
         <?php wp_head(); ?>
         
         <?php /*Custom JS Files*/ ?>
-        <?php if ( is_single() && has_post_format('gallery') ) : ?>
-            
-            <script src="<?php echo get_template_directory_uri(); ?>/js/image-nav.js" type="text/javascript"></script>
-            <script src="<?php echo get_template_directory_uri(); ?>/js/center-images.js" type="text/javascript"></script>
-            <script src="<?php echo get_template_directory_uri(); ?>/js/toggle-image-text.js" type="text/javascript"></script>
-            
-        <?php elseif ( is_single() && has_post_format('video') ) : ?>
-            
-            <script src="<?php echo get_template_directory_uri(); ?>/js/toggle-image-text.js" type="text/javascript"></script>
-            
-        <? endif; ?>
         
     </head>
     
@@ -69,11 +58,16 @@
         <header id="branding" role="banner">
             <div id="logo">
                 <h1 id="site-title">
-                    <a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">CleanSlate</a>
+                    <a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">Dutch Innovation</a>
                 </h1>
             </div>
             
+            <h4>Centuries of <br/>Start-Up Culture</h4>
+            
             <nav id="main-menu" role="navigation">
+                
+                <h3>Your Daily Dose of Innovation</h3>
+                
                 <?php
                     // default menu
                     wp_nav_menu( array( 'theme_location' => 'primary' ) );
