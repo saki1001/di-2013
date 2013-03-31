@@ -9,15 +9,26 @@
         <div id="sidebar">
             
             <ul class="post-date-nav">
-            <?php if (get_adjacent_post(false, '', true)): // if there are older posts ?>
-                <li class="prev"><?php previous_post_link('%link', '', TRUE); ?></li>
-            <?php endif; ?>
-            
+            <?php 
+                // BEGIN Previous Post Link Conditional
+                if (get_adjacent_post(false, '', true)):
+            ?>
+                    <li class="prev"><?php previous_post_link('%link', '', TRUE); ?></li>
+            <?php
+                // END Previous Post Link Conditional
+                endif;
+            ?>
                 <li class="post-date"><?php the_date('l, F j, Y'); ?></li>
             
-            <?php if (get_adjacent_post(false, '', false)): // if there are newer posts ?>
+            <?php
+                // BEGIN Next Post Link Conditional
+                if (get_adjacent_post(false, '', false)):
+            ?>
                 <li class="next"><?php next_post_link('%link', '', TRUE); ?></li>
-            <?php endif; ?>
+            <?php
+                // END Next Post Link Conditional
+                endif;
+            ?>
             </ul>
             
             <ul class="post-summary">
