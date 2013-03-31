@@ -383,6 +383,31 @@ add_theme_support( 'post-thumbnails' );
 add_image_size( 'browse-thumbnail', 222, 222, true );
 add_image_size( 'promo-thumbnail', 335, 335, true );
 
+
+// Alter the Loop for homepage
+function most_recent_post( $query ) {
+    
+    // $current_year = date('Y', current_time('timestamp'));
+    // $current_month = date('m', current_time('timestamp'));
+    // $current_day = date('j', current_time('timestamp'));
+    // 
+    //         $args = array(
+    //             'cat'      => 2,
+    //             'year'     => $current_year,
+    //             'monthnum' => $current_month,
+    //             'day' => $current_day,
+    //             'posts_per_page' => '1',
+    //             'order'    => 'ASC'
+    //         );
+    
+    if ( $query->is_home() && $query->is_main_query() ) {
+        
+        $query->set('posts_per_page', '1');
+        
+    }
+}
+add_action( 'pre_get_posts', 'most_recent_post' );
+
 /**
  * This theme was built with PHP, Semantic HTML, CSS, love, and a Toolbox.
  */
