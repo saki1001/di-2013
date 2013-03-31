@@ -9,10 +9,6 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     
-    <h2 class="entry-title">
-        <?php the_title(); ?>
-    </h2>
-    
     <?php
         // Define args to get attachments
         $args = array(
@@ -34,19 +30,27 @@
     ?>
     
     <div class="entry-content <?php echo $noImageClass; ?>">
+        
+        <?php
+            if (get_field('subtitle')) {
+        ?>
+            <h2 class="subtitle"><?php the_field('subtitle'); ?></h2>
+        <?php
+            }
+        ?>
+        
         <?php the_content(); ?>
     </div>
     
     <?php
-        // Insert images as background-image (to show rounded corners)
-        // And as a regular image element (which is hidden)
+        // Insert images uploaded to post
         if ( $attachments ) :
             foreach ( $attachments as $attachment ) {
                 
                 $image = wp_get_attachment_image( $attachment->ID, 'page' );
                 $imageUrl = wp_get_attachment_image_src( $attachment->ID, 'page' );
     ?>
-            <figure style="background: url(<?php echo $imageUrl[0]?>) no-repeat center center;">
+            <figure>
                 <?php
                     echo $image;
                 ?>
