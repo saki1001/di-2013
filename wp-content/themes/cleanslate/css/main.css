@@ -277,7 +277,7 @@ header h4 {
     float: left;
 }
 
-#main #content h2 {
+#main #content article h2 {
     font-size: 4.8em;
     font-weight: bold;
     line-height: 1.2;
@@ -285,54 +285,54 @@ header h4 {
     width: 100%;
 }
 
-#main #content .subtitle {
+#main #content article .post-subtitle {
     font-size: 2.4em;
     line-height: 1.2;
     padding-bottom: 15px;
     width: 100%;
 }
 
-#main #content .social-icons {
+#main #content article .social-icons {
     width: 100%;
     margin-bottom: 17px;
     float: left;
 }
 
-#main #content .social-icons li {
+#main #content article .social-icons li {
     margin-right: 5px;
     float: left;
 }
 
-#main #content .social-icons li a {
+#main #content article .social-icons li a {
     width: 24px;
     height: 24px;
     background: url('../images/social-icons-sprite.jpg') no-repeat 0 0;
     display: block;
 }
 
-#main #content .social-icons li a.pintrest {
+#main #content article .social-icons li a.pintrest {
     background-position: 0 0;
 }
 
-#main #content .social-icons li a.twitter {
+#main #content article .social-icons li a.twitter {
     background-position: -24px 0;
 }
 
-#main #content .social-icons li a.linkedin {
+#main #content article .social-icons li a.linkedin {
     background-position: -48px 0;
 }
 
-#main #content .social-icons li a.facebook {
+#main #content article .social-icons li a.facebook {
     background-position: -72px 0;
 }
 
-#main #content img {
+#main #content .text-container img {
     max-width: 542px;
     border: 4px solid #000000;
     overflow: hidden;
 }
 
-#main #content p {
+#main #content .text-container p {
     font-size: 1.55em;
     line-height: 1.4;
     margin-bottom: 15px;
@@ -498,61 +498,59 @@ body.page #main #content figcaption {
     color:#006699;
 }
 
-/* Category ---- Portfolio Thumbnail
+/* Category and Tags ---- Browse
 -------------------------------------------------------------- */
-body.category #content .thumb-container {
+body.category-browse #main #content {
+    width:100%;
+}
+
+#main #content .browse-posts {
+    width: 100%;
     float: left;
+}
+
+#main #content .browse-posts .column {
+    margin: 0 0 10px 10px;
     position: relative;
-    width: 350px;
-    height: 200px;
-    margin: 0 25px 25px 0;
-    -webkit-border-radius: 10px;
-       -moz-border-radius: 10px;
-            border-radius: 10px;
+    float: left;
 }
 
-body.category #content .thumb-container figcaption {
+#main #content .browse-posts .column.first {
+    margin-left: 0;
+}
+
+#main #content .browse-posts article a {
+    display: block;
+    overflow: hidden;
+    width: 222px;
+    height: 222px;
+    border: 4px solid #000000;
+}
+
+#main #content .browse-posts article a:hover {
+    opacity: 0;
+}
+
+#main #content .browse-posts article figcaption {
     position: absolute;
-    top: 1px;
-    z-index: 1;
-    width: 350px;
-    height: 200px;
-    margin: 0;
-    background-color: #006699;
-    -webkit-border-radius: 10px;
-       -moz-border-radius: 10px;
-            border-radius: 10px;
+    width: 222px;
+    height: 222px;
+    color: #FE6702;
+    border: 4px solid #FE6702;
+    background-color: #FFFFFF;
+    z-index: -2;
 }
 
-body.category #content .thumb-container figcaption p {
-    font-size: 2em;
-    color: #FFF;
-    text-align: center;
-    margin: 90px 20px;
+#main #content .browse-posts article figcaption h4 {
+    font-size: 1.9em;
+    font-weight: bold;
+    padding: 20px 0 0 20px;
 }
 
-body.category #content .thumb-container figure a {
-    position: absolute;
-    width: 350px;
-    height: 200px;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    -webkit-border-radius: 10px;
-       -moz-border-radius: 10px;
-            border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.15);
-       -moz-box-shadow: inset 0 0 10px rgba(0,0,0,0.15);
-            box-shadow: inset 0 0 10px rgba(0,0,0,0.15);
-}
-
-body.category #content .thumb-container figure a:hover {
-    opacity: 0.25;
-}
-
-/*hide in order to keep rounded corners by using bg-image*/
-body.category #content .thumb-container figure a img {
-    visibility: hidden;
+#main #content .browse-posts article figcaption p {
+    font-size: 1.35em;
+    font-weight: bold;
+    padding: 10px 0 0 20px;
 }
 
 /* Single Post General
@@ -584,7 +582,7 @@ body.portfolio-gallery #main {
     position: relative;
 }
 
-body.portfolio-gallery #main h2.page-title {
+body.portfolio-gallery #main h2.post-title {
     max-width: 575px;
     float: left;
 }
