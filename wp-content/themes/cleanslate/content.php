@@ -10,7 +10,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     
     <hgroup>
-        <h2 class="page-title">
+        <h2 class="post-title">
             <?php
                 the_title();
             ?>
@@ -19,7 +19,7 @@
         <?php
             if (get_field('subtitle')) {
         ?>
-            <h3 class="subtitle"><?php the_field('subtitle'); ?></h3>
+            <h3 class="post-subtitle"><?php the_field('subtitle'); ?></h3>
         <?php
             }
         ?>
