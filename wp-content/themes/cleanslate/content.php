@@ -7,18 +7,41 @@
  */
 ?>
 
-<section id="content" class="post-single" role="main">
-    <h2 class="page-title">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    
+    <hgroup>
+        <h2 class="page-title">
+            <?php
+                the_title();
+            ?>
+        </h2>
+        
         <?php
-            the_title();
+            if (get_field('subtitle')) {
         ?>
-    </h2>
+            <h3 class="subtitle"><?php the_field('subtitle'); ?></h3>
+        <?php
+            }
+        ?>
+    </hgroup>
+    
+    <ul class="social-icons">
+        <li>
+            <a href="#" class="pintrest" title="Share with Pintrest."></a>
+        </li>
+        <li>
+            <a href="#" class="twitter" title="Share with Twitter."></a>
+        </li>
+        <li>
+            <a href="#" class="facebook" title="Share with Facebook."></a>
+        </li>
+        <li>
+            <a href="#" class="linkedin" title="Share with LinkedIn."></a>
+        </li>
+    </ul>
+    
+    <div id="text" class="text-container">
+        <?php the_content(); ?>
+    </div>
 
-    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    
-        <div id="text" class="text-container">
-            <?php the_content(); ?>
-        </div>
-    
-    </article><!-- #post-<?php the_ID(); ?> -->
-</section>
+</article><!-- #post-<?php the_ID(); ?> -->
