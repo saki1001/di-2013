@@ -14,8 +14,31 @@
 </div><!-- #page -->
 
 <footer id="footer" role="contentinfo">
-    <div>
-        Author &copy;2013
+    <div id="footer-content">
+        
+        <form id="newsletter-form">
+          <input name="newsletter" type="email" placeholder="Newsletter signup...">
+          <input type="submit" value="OK">
+        </form>
+        
+        <ul class="social-icons">
+            <li>
+                <a href="#" class="pintrest" title="Share with Pintrest."></a>
+            </li>
+            <li>
+                <a href="#" class="twitter" title="Share with Twitter."></a>
+            </li>
+            <li>
+                <a href="#" class="facebook" title="Share with Facebook."></a>
+            </li>
+            <li>
+                <a href="#" class="linkedin" title="Share with LinkedIn."></a>
+            </li>
+        </ul>
+        
+        <div id="footer-logo">
+            <h4>Holland: Pioneers in international business</h4>
+        </div>
     </div>
 </footer><!-- #footer -->
 
