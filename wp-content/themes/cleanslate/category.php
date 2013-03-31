@@ -10,10 +10,6 @@ get_header(); ?>
 
     <?php if ( have_posts() ) : ?>
         
-        <h2 class="page-title">
-            <?php printf( __( 'Category Archives: %s', 'toolbox' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?>
-        </h2>
-        
         <section id="content" role="main">
             
             <?php while ( have_posts() ) : the_post(); ?>
