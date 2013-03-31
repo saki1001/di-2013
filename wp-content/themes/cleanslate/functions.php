@@ -379,8 +379,9 @@ function get_category_tags($args) {
 // Adding Thumbnails
 add_theme_support( 'post-thumbnails' );
 
-// Adding Custom Image Size for Page Template
-add_image_size( 'page', 350, 0 );
+// Adding Custom Thumbnail Size for Browse page
+add_image_size( 'browse-thumbnail', 222, 222, true );
+add_image_size( 'promo-thumbnail', 335, 335, true );
 
 /**
  * This theme was built with PHP, Semantic HTML, CSS, love, and a Toolbox.
