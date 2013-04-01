@@ -209,12 +209,14 @@ header h4 {
     border-bottom: none;
 }
 
-#main #content article h2 {
+#main #content article h2 a {
     font-size: 4.8em;
     font-weight: bold;
     line-height: 1.2;
+    color: #000000;
     padding: 10px 0 5px;
     width: 100%;
+    display: block;
 }
 
 #main #content article .post-subtitle {
