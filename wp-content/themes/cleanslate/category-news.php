@@ -14,7 +14,7 @@ get_header(); ?>
             if ( have_posts() ) :
                 
                 while ( have_posts() ) : the_post();
-                
+                    
                     get_template_part( 'content', get_post_format() );
                     
                 endwhile;
@@ -28,6 +28,6 @@ get_header(); ?>
     
     </section>
     
-    <?php get_sidebar('recent'); ?>
+    <?php get_sidebar('featured'); ?>
         
 <?php get_footer(); ?>
