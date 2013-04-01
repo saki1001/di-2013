@@ -43,9 +43,6 @@ body {
     padding: 0 52px;
 }
 
-/* Footer
--------------------------------------------------------------- */
-
 /*
 Sticky Footer by Ryan Fait
 http://ryanfait.com/
@@ -60,89 +57,6 @@ http://ryanfait.com/
     overflow: hidden; /*clearfix*/
     position: relative;
     z-index: -1;
-}
-
-#footer {
-    width: 100%;
-    text-align: right;
-    font-size: 1.6em;
-    background-color: #FE6702;
-}
-
-#footer-content {
-    width: 950px;
-    height: 185px;
-    margin: 0 auto;
-    text-align: right;
-    background-color: #FE6702;
-    position: relative;
-    z-index: 2;
-}
-
-#footer form {
-    margin-top: 20px;
-    float: left;
-}
-
-#footer form input[type="email"] {
-    font-family: 'Arial', Helvetica, sans-serif;
-    font-size: 0.8em;
-    border: none;
-    padding: 8px 6px 6px;
-}
-
-#footer form input[type="submit"] {
-    color: #FE6702;
-    border: none;
-    background-color: #FFFFFF;
-    padding: 8px 8px 7px;
-    font-weight: bold;
-    margin-left: 3px;
-}
-
-#footer .social-icons {
-    margin: 24px 0 0 10px;
-    float: left;
-}
-
-#footer .social-icons li {
-    margin-right: 3px;
-    float: left;
-}
-
-#footer .social-icons li a {
-    width: 24px;
-    height: 24px;
-    background: url('../images/social-icons-sprite.jpg') no-repeat 0 -24px;
-    display: block;
-}
-
-#footer .social-icons li a.pintrest {
-    background-position: 0 -24px;
-}
-
-#footer .social-icons li a.twitter {
-    background-position: -24px -24px;
-}
-
-#footer .social-icons li a.linkedin {
-    background-position: -48px -24px;
-}
-
-#footer .social-icons li a.facebook {
-    background-position: -72px -24px;
-}
-
-#footer #footer-logo {
-    width: 192px;
-    height: 162px;
-    margin-top: 20px;
-    background: url('../images/holland-logo.png') no-repeat 0 0;
-    float: right;
-}
-
-#footer #footer-logo h4 {
-    display: none;
 }
 
 header,
@@ -186,6 +100,12 @@ a:active, a:hover {
     text-decoration: none;
 }
 
+/* Forms
+-------------------------------------------------------------- */
+input:focus {
+    outline: none;
+    border: none;
+}
 
 /* Headers
 -------------------------------------------------------------- */
@@ -277,6 +197,18 @@ header h4 {
     float: left;
 }
 
+#main #content article {
+    margin-bottom: 10px;
+    padding-bottom: 40px;
+    border-bottom: solid 1px #000000;
+}
+
+#main #content article.last {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
 #main #content article h2 {
     font-size: 4.8em;
     font-weight: bold;
@@ -345,6 +277,8 @@ header h4 {
     float: right;
 }
 
+/* Sidebar - Homepage
+-------------------------------------------------------------- */
 #main #sidebar .post-date-nav {
     width: 100%;
     margin-bottom: 15px;
@@ -426,6 +360,42 @@ header h4 {
     overflow: hidden;
 }
 
+/* Sidebar - Featured
+-------------------------------------------------------------- */
+#main #sidebar.featured h5 {
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: solid 1px #000000;
+}
+
+#main #sidebar.featured .thumb {
+    margin-bottom: 20px;
+}
+
+#main #sidebar.featured figure {
+    margin-bottom: 10px;
+}
+
+#main #sidebar.featured figure a {
+    width: 338px;
+    height: 187px;
+    display: block;
+}
+
+#main #sidebar.featured figcaption .post-date {
+    font-size: 1.1em;
+    color: #898989;
+    margin-bottom: 5px;
+}
+
+#main #sidebar.featured figcaption .post-title {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
 /* Home
 -------------------------------------------------------------- */
 /*body.home { }*/
@@ -485,23 +455,66 @@ body.page #main #content figcaption {
     float: right;
 }
 
-
-/* Pagination
--------------------------------------------------------------- */
-#content .list-footer {
-    width: 100%;
-    font-size: 1.6em;
-    line-height: 1.2;
-}
-
-#content .list-footer .current {
-    color:#006699;
-}
-
 /* Category and Tags ---- Browse
 -------------------------------------------------------------- */
-body.category-browse #main #content {
+body.category-browse #main #content,
+body.tag #main #content {
     width:100%;
+}
+
+#main #content .browse-filters {
+    width: 100%;
+    float: left;
+}
+
+#main #content .browse-filters p {
+    font-size: 1.3em;
+    color: #CECECE;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+#main #content .browse-filters .tag-list {
+    width: 720px;
+    margin-bottom: 20px;
+    float: left;
+}
+
+#main #content .browse-filters .tag-list li {
+    margin-right: 10px;
+    float: left;
+}
+
+#main #content .browse-filters .tag-list li a {
+    font-weight: bold;
+    font-size: 1.4em;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding: 11px 13px;
+    border: solid 4px #000000;
+    background-color: #000000;
+    display: block;
+}
+
+#main #content .browse-filters .tag-list li a:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+#main #content .browse-filters #search-form {
+    width: 230px;
+    background: url('../images/search-icon.jpg') no-repeat 10px 13px;
+    float: left;
+}
+
+#main #content .browse-filters #search-form input[type="text"] {
+    font-family: 'Arial', Helvetica, sans-serif;
+    font-size: 1.4em;
+    color: #AEAEAE;
+    width: 185px;
+    border: solid 1px #999999;
+    background: none;
+    padding: 14px 8px 12px 35px;
 }
 
 #main #content .browse-posts {
@@ -519,7 +532,7 @@ body.category-browse #main #content {
     margin-left: 0;
 }
 
-#main #content .browse-posts article a {
+#main #content .browse-posts .thumb a {
     display: block;
     overflow: hidden;
     width: 222px;
@@ -527,11 +540,11 @@ body.category-browse #main #content {
     border: 4px solid #000000;
 }
 
-#main #content .browse-posts article a:hover {
+#main #content .browse-posts .thumb a:hover {
     opacity: 0;
 }
 
-#main #content .browse-posts article figcaption {
+#main #content .browse-posts .thumb figcaption {
     position: absolute;
     width: 222px;
     height: 222px;
@@ -541,13 +554,13 @@ body.category-browse #main #content {
     z-index: -2;
 }
 
-#main #content .browse-posts article figcaption h4 {
+#main #content .browse-posts .thumb figcaption h4 {
     font-size: 1.9em;
     font-weight: bold;
     padding: 20px 0 0 20px;
 }
 
-#main #content .browse-posts article figcaption p {
+#main #content .browse-posts .thumb figcaption p {
     font-size: 1.35em;
     font-weight: bold;
     padding: 10px 0 0 20px;
@@ -883,136 +896,6 @@ News, Blog and Tag pages in these categories
     font-size: 1.6em;
 }
 
-/* Content
--------------------------------------------------------------- */
-
-.sticky {
-}
-.entry-meta {
-    clear: both;
-    display: block;
-}
-.single-author .entry-meta .byline {
-    display: none;
-}
-#content nav {
-    display: block;
-    overflow: hidden;
-}
-#content nav .nav-previous {
-    float: left;
-    width: 50%;
-}
-#content nav .nav-next {
-    float: right;
-    text-align: right;
-    width: 50%;
-}
-#content #nav-above {
-    display: none;
-}
-.paged #content #nav-above,
-.single #content #nav-above {
-    display: block;
-}
-#nav-below {
-    margin: 1em 0 0;
-}
-.page-link {
-    clear: both;
-    margin: 0 0 1em;
-}
-.page .edit-link {
-    clear: both;
-    display: block;
-    font-size: 1.4em;
-}
-
-/* 404 page */
-.error404 .widget {
-    float: left;
-    width: 33%;
-}
-.error404 .widget .widgettitle,
-.error404 .widget ul {
-    margin-right: 1em;
-}
-.error404 .widget_tag_cloud {
-    clear: both;
-    float: none;
-    width: 100%;
-}
-
-/* Notices */
-.post .notice,
-.error404 #searchform {
-    background: #eee;
-    display: block;
-    padding: 1em;
-}
-
-/* Image Attachments */
-.image-attachment div.entry-meta {
-    float: left;
-}
-.image-attachment nav {
-    float: right;
-    margin: 0 0 1em 0;
-}
-.image-attachment .entry-content {
-    clear: both;
-}
-.image-attachment .entry-content .entry-attachment {
-    background: #eee;
-    margin: 0 0 1em;
-    padding: 1em;
-    text-align: center;
-}
-.image-attachment .entry-content .attachment {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-}
-
-/* Aside Posts */
-.format-aside .entry-header {
-    display: none;
-}
-.single .format-aside .entry-header {
-    display: block;
-}
-.format-aside .entry-content,
-.format-aside .entry-summary {
-    padding-top: 1em;
-}
-.single .format-aside .entry-content,
-.single .format-aside .entry-summary {
-    padding-top: 0;
-}
-
-/* Gallery Posts */
-.format-gallery .gallery-thumb {
-    float: left;
-    margin: 0 1em 0 0;
-}
-
-/* Image Posts */
-.format-image .entry-header {
-    display: none;
-}
-.single .format-image .entry-header {
-    display: block;
-}
-.format-image .entry-content,
-.format-image .entry-summary {
-    padding-top: 1em;
-}
-.single .format-image .entry-content,
-.single .format-image .entry-summary {
-    padding-top: 0;
-}
-
-
 /* Images
 -------------------------------------------------------------- */
 
@@ -1060,63 +943,80 @@ img.alignright {
 }
 
 
-/* Forms
+/* Footer
 -------------------------------------------------------------- */
-
-#searchform label {
-    display: none;
-}
-#searchform input#s {
-    width: 60%;
-}
-input[type=text],
-input#s {
-    margin: 0 1em 0 0;
-    width: 60%;
-}
-textarea {
-    width: 80%;
+#footer {
+    width: 100%;
+    text-align: right;
+    font-size: 1.6em;
+    background-color: #FE6702;
 }
 
-/* Class for labelling required form items */
-.required {
-    color: #cc0033;
+#footer-content {
+    width: 950px;
+    height: 185px;
+    margin: 0 auto;
+    text-align: right;
+    background-color: #FE6702;
+    position: relative;
+    z-index: 2;
 }
 
-
-/* Comments
--------------------------------------------------------------- */
-
-article.comment {
-    display: block;
-}
-#respond input[type=text] {
-    display: block;
-    width: 60%;
-}
-#respond textarea {
-    display: block;
-    margin: 0 0 1em;
-    width: 80%;
-}
-#respond .form-allowed-tags {
-    clear: both;
-    width: 80%;
-}
-#respond .form-allowed-tags code {
-    display: block;
-}
-
-
-/* Widgets
--------------------------------------------------------------- */
-
-.widget {
-    display: block;
-}
-.widget-area .widget_search {
-    overflow: hidden;
-}
-.widget-area .widget_search input {
+#footer form {
+    margin-top: 20px;
     float: left;
+}
+
+#footer form input[type="email"] {
+    font-family: 'Arial', Helvetica, sans-serif;
+    font-size: 0.8em;
+    color: #AEAEAE;
+    width: 200px;
+    border: none;
+    padding: 8px 6px 6px;
+}
+
+#footer .social-icons {
+    margin: 24px 0 0 10px;
+    float: left;
+}
+
+#footer .social-icons li {
+    margin-right: 3px;
+    float: left;
+}
+
+#footer .social-icons li a {
+    width: 24px;
+    height: 24px;
+    background: url('../images/social-icons-sprite.jpg') no-repeat 0 -24px;
+    display: block;
+}
+
+#footer .social-icons li a.pintrest {
+    background-position: 0 -24px;
+}
+
+#footer .social-icons li a.twitter {
+    background-position: -24px -24px;
+}
+
+#footer .social-icons li a.linkedin {
+    background-position: -48px -24px;
+}
+
+#footer .social-icons li a.facebook {
+    background-position: -72px -24px;
+}
+
+#footer #footer-logo {
+    width: 192px;
+    height: 162px;
+    margin-top: 20px;
+    background: url('../images/holland-logo.png') no-repeat 0 0;
+    float: right;
+}
+
+#footer #footer-logo h4 {
+    display: none;
 }
