@@ -32,8 +32,20 @@
             </ul>
             
             <ul class="post-summary">
+                <?php
+                    // BEGIN Today Conditional
+                    $date_label = '';
+                    $today = date('F j, Y', current_time('timestamp'));
+                    
+                    if ( get_the_date() === $today ) :
+                        
+                        $date_label = 'Today\'s ';
+                        
+                    endif;
+                    // END
+                ?>
                 <li class="label">
-                    <p>Today's Innovation Story</p>
+                    <p><?php echo $date_label; ?>Innovation Story</p>
                 </li>
                 <li>
                     <h4>
