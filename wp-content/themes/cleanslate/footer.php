@@ -17,8 +17,7 @@
     <div id="footer-content">
         
         <form id="newsletter-form">
-          <input name="newsletter" type="email" placeholder="Newsletter signup...">
-          <input type="submit" value="OK">
+          <input name="newsletter" type="email" placeholder="Newsletter signup..." />
         </form>
         
         <ul class="social-icons">
