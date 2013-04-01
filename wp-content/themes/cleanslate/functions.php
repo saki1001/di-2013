@@ -403,10 +403,21 @@ function most_recent_post( $query ) {
     if ( $query->is_home() && $query->is_main_query() ) {
         
         $query->set('posts_per_page', '1');
+        $query->set('cat', '2');
         
     }
 }
 add_action( 'pre_get_posts', 'most_recent_post' );
+
+
+// Add "last" class to last post in loop
+add_filter('post_class', 'my_post_class');
+
+function my_post_class($classes){
+    global $wp_query;
+    if(($wp_query->current_post+1) == $wp_query->post_count) $classes[] = 'last';
+    return $classes;
+}
 
 /**
  * This theme was built with PHP, Semantic HTML, CSS, love, and a Toolbox.
