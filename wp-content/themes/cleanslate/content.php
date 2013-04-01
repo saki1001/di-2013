@@ -11,9 +11,7 @@
     
     <hgroup>
         <h2 class="post-title">
-            <?php
-                the_title();
-            ?>
+            <a href="<?php the_permalink(); ?>"><?php the_title();?></a>
         </h2>
         
         <?php
@@ -44,4 +42,4 @@
         <?php the_content(); ?>
     </div>
 
-</article><!-- #post-<?php the_ID(); ?> -->
+</article>
