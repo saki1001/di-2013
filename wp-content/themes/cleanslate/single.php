@@ -18,7 +18,7 @@
         if ($cat_slug === 'browse') :
             $sidebar = '';
         else :
-            $sidebar = 'recent';
+            $sidebar = 'featured';
         endif;
     ?>
     
