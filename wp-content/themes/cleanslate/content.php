@@ -41,5 +41,5 @@
     <div id="text" class="text-container">
         <?php the_content(); ?>
     </div>
-
+    
 </article>
