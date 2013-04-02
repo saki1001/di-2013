@@ -29,12 +29,12 @@
         endif;
     ?>
     
-    <div class="entry-content <?php echo $noImageClass; ?>">
+    <div id="text" class="text-container <?php echo $noImageClass; ?>">
         
         <?php
             if (get_field('subtitle')) {
         ?>
-            <h2 class="subtitle"><?php the_field('subtitle'); ?></h2>
+            <h3 class="subtitle"><?php the_field('subtitle'); ?></h3>
         <?php
             }
         ?>
@@ -68,4 +68,4 @@
         endif;
     ?>
     
-</article><!-- #post-<?php the_ID(); ?> -->
+</article>
