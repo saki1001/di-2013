@@ -8,27 +8,21 @@
 ?>
 
 <?php
-    // if( is_category() ) :
-    //     // $category = get_the_category();
-    //     $category = get_queried_object();
-    //     $cat_parent = ( $category->category_parent ) ? $category->category_parent : $category->cat_ID;
-    //     $action_url = get_category_link($cat_parent);
-    // else :
-    //     $action_url = get_bloginfo('home');
-    //     if( is_search() ) :
-    //         $action_url .= $_SERVER['REQUEST_URI'];
-    //     endif;
-    // endif;
-    
-    $action_url = get_bloginfo('home');
-    if( is_search() ) :
-        $action_url .= $_SERVER['REQUEST_URI'];
+    if( is_category() ) :
+        // $category = get_the_category();
+        $category = get_queried_object();
+        $cat_parent = ( $category->category_parent ) ? $category->category_parent : $category->cat_ID;
+        $action_url = get_category_link($cat_parent);
+    else :
+        $action_url = get_bloginfo('home');
+        if( is_search() ) :
+            $action_url .= $_SERVER['REQUEST_URI'];
+        endif;
     endif;
 ?>
 
-<form role="search" method="get" id="search-form" action="<?php echo $action_url; ?>">
-    <div><label class="screen-reader-text" for="search">Search for:</label>
-        <input type="text" value="" name="search" id="search" placeholder="Search..." />
-        <!-- <input type="submit" id="searchsubmit" value="Search" /> -->
+<form role="search" method="get" id="searchform" action="<?php echo $action_url; ?>">
+    <div><label class="screen-reader-text" for="s">Search for:</label>
+        <input type="text" value="" name="s" id="s" placeholder="Search..." />
     </div>
 </form>
