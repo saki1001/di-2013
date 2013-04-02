@@ -6,41 +6,34 @@
  * @since CleanSlate 0.1
  */
 ?>
-    
-    <?php
-        get_header();
-        
-        // Determine parent cat and current cat
-        $categories = get_the_category();
-        $parent_cat_num = $categories[0]->parent;
-        $cat_slug = $categories[0]->slug;
-        
-        if ($cat_slug === 'browse') :
-            $sidebar = '';
-        else :
-            $sidebar = 'featured';
-        endif;
-    ?>
+
+<?php get_header(); ?>
     
     <section id="content" role="main">
     
     <?php
         if ( have_posts() ) :
-            while ( have_posts() ) : the_post();
-                
-                // Standard Template
-                get_template_part('content', get_post_format() );
-                
-            endwhile; // end of the loop.
     ?>
+            <div id="articles">
+            
+    <?php
+            while ( have_posts() ) : the_post();
+                get_template_part('content', get_post_format() );
+            endwhile;
+    ?>
+            
+            </div>
+    <?php
+        else :
+            // Content Not Found Template
+            include('content-not-found.php');
         
-    <?php else :
-        // Content Not Found Template
-        include('content-not-found.php');
-        
-    endif; ?>
+        endif;
+    
+    ?>
+    
+    <?php get_sidebar('featured'); ?>
     
     </section>
     
-<?php get_sidebar($sidebar); ?>
 <?php get_footer(); ?>
