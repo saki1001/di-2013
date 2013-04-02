@@ -23,6 +23,7 @@
             
             if ( $browseContent === true ) :
                 // Browse Template
+                include('content-filters.php');
                 include('content-browse.php');
             else :
                 include('content.php');
