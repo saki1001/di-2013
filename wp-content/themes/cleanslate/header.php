@@ -35,18 +35,25 @@
         <meta name="description" content="<?php echo $site_description; ?>" />
         
         <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/style.css" />
-        <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
         
         <!--[if lt IE 9]>
             <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
         <![endif]-->
         
-        <?php wp_enqueue_script("jquery"); ?>
+        <?php wp_enqueue_scripts(); ?>
         
         <?php wp_head(); ?>
         
         <?php /*Custom JS Files*/ ?>
+            <script src="<?php echo get_template_directory_uri(); ?>/js/search-ajax.js" type="text/javascript"></script>
+        <?php
+            if( is_home() ) {
+        ?>
+            <script src="<?php echo get_template_directory_uri(); ?>/js/load-adjacent-post.js" type="text/javascript"></script>
+        <?php
+            }
+        ?>
         
     </head>
     
