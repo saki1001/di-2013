@@ -5,29 +5,36 @@
  * @package CleanSlate
  * @since CleanSlate 0.1
  */
+?>
 
-get_header(); ?>
+<?php get_header(); ?>
         
     <section id="content" role="main">
         
         <?php
             if ( have_posts() ) :
+        ?>
+                <div id="articles">
                 
-                while ( have_posts() ) : the_post();
-                
-                    get_template_part( 'content', get_post_format() );
+                <?php
                     
-                endwhile;
+                    while ( have_posts() ) : the_post();
+                        get_template_part( 'content', get_post_format() );
+                    endwhile;
+                    
+                ?>
                 
+                </div>
+        <?php
             else :
             // Content Not Found Template
             include('content-not-found.php');
             
             endif;
         ?>
-    
+        
+        <?php get_sidebar(); ?>
+        
     </section>
     
-    <?php get_sidebar(); ?>
-        
 <?php get_footer(); ?>
