@@ -11,14 +11,12 @@
             <ul class="post-date-nav">
             <?php 
                 // BEGIN Previous Post Link Conditional
-                if (get_adjacent_post(false, '', true)):
-                    $prev_post = get_previous_post(true);
+                $prev_post = get_previous_post(true);
+                
+                if ($prev_post):
             ?>
                     <li class="prev">
                         <a id="prev-link" href="#" data-post-date="<?php echo $prev_post->post_date; ?>"></a>
-                        <?php
-                            // previous_post_link('%link', '', TRUE);
-                        ?>
                     </li>
             <?php
                 // END Previous Post Link Conditional
@@ -28,14 +26,12 @@
             
             <?php
                 // BEGIN Next Post Link Conditional
-                if (get_adjacent_post(false, '', false)):
-                    $next_post = get_next_post(true);
+                $next_post = get_next_post(true);
+                
+                if ($next_post):
             ?>
                 <li class="next">
                     <a id="next-link" href="#" data-post-date="<?php echo $next_post->post_date; ?>">></a>
-                    <?php 
-                        // next_post_link('%link', '', TRUE);
-                    ?>
                 </li>
             <?php
                 // END Next Post Link Conditional
