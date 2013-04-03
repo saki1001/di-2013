@@ -43,17 +43,22 @@
     </div>
     
     <?php
-        // Insert images uploaded to post
-        if ( $attachments ) :
+        // Insert slideshow for About page
+        if ( is_page('about') ) :
+    ?>
+        <figure>
+            <?php do_action('slideshow_deploy', '174'); ?>
+        </figure>
+    <?php
+        elseif ( $attachments ) :
+            // Insert images uploaded to post
             foreach ( $attachments as $attachment ) {
                 
                 $image = wp_get_attachment_image( $attachment->ID, 'page' );
                 $imageUrl = wp_get_attachment_image_src( $attachment->ID, 'page' );
     ?>
             <figure>
-                <?php
-                    echo $image;
-                ?>
+                <?php echo $image; ?>
             </figure>
             <figcaption>
                 <?php
