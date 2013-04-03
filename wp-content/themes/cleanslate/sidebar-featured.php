@@ -13,11 +13,19 @@
             <ul>
                 
             <?php
-                $posts = get_posts('category=8&numberposts=5');
+                // Get posts tagged "Featured"
+                $args = array(
+                     'numberposts' => 5,
+                     'tag_id' => '8'
+                 );
                 
-                foreach($posts as $post) {
+                $the_query = new WP_Query( $args );
+                
+                while ( $the_query->have_posts() ) : $the_query->the_post();
                     get_template_part( 'content-thumb-sidebar', get_post_format() );
-                }
+                endwhile;
+                
+                wp_reset_query();
             ?>
             
             </ul>
