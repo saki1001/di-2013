@@ -21,12 +21,19 @@
         
         $count = 0;
         foreach ($tags as $tag) {
-            $tag_link = $tag_link = get_tag_link( $tag->tag_id );
+            
+            // Exclude Featured tag
+            if ( $tag->tag_id === '8' ) :
+                // do nothing
+            else :
+                $tag_link = $tag_link = get_tag_link( $tag->tag_id );
     ?>
-        <li>
-            <a href="<?php echo $tag_link; ?>" title="<?php echo $tag->tag_name; ?> Tag"><?php echo $tag->tag_name; ?></a>
-        </li>
+                <li>
+                    <a href="<?php echo $tag_link; ?>" title="<?php echo $tag->tag_name; ?> Tag"><?php echo $tag->tag_name; ?></a>
+                </li>
     <?php
+            endif;
+            
             $count++;
         }
     ?>
