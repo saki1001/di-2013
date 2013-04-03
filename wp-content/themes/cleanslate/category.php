@@ -54,6 +54,9 @@
             endif;
         ?>
         
+        <div class="pagination">
+            <div id="next-page"><?php next_posts_link('Next &rarr;','') ?></div>
+        </div>
     </section>
     
 <?php get_footer(); ?>
