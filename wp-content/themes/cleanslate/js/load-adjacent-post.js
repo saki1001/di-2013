@@ -21,20 +21,19 @@ $j(document).ready(function() {
                 alert(jqXHR + " :: " + textStatus + " :: " + errorThrown);
             }
         });
+        
     };
     
     var getAdjacentPost = function() {
         
-        $j("#prev-link").off('click', getAdjacentPost);
-        $j("#next-link").off('click', getAdjacentPost);
+        $j('this').unbind('click', getAdjacentPost);
         
         var postId = $j(this).attr('data-id');
         var postDate = $j(this).attr('data-post-date');
         
         ajaxRequest(postDate);
         
-        $j("#prev-link").live('click', getAdjacentPost);
-        $j("#next-link").live('click', getAdjacentPost);
+        $j('this').live('click', getAdjacentPost);
         
         return false;
     };
