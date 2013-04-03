@@ -7,7 +7,7 @@
  */
 ?>
 
-<div class="thumb">
+<!-- <article class="thumb"> -->
     
     <figcaption>
         <h4 class="post-title">
@@ -62,4 +62,4 @@
             
     </figure>
     
-</div>
+<!-- </article> -->
