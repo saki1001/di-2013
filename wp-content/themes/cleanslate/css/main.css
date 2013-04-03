@@ -201,19 +201,19 @@ header h4 {
     float: left;
 }
 
-#main #content article {
+#main #content article.post {
     margin-bottom: 10px;
     padding-bottom: 40px;
     border-bottom: solid 1px #000000;
 }
 
-#main #content article.last {
+#main #content article.post.last {
     margin-bottom: 0;
     padding-bottom: 0;
     border-bottom: none;
 }
 
-#main #content article h2 a {
+#main #content article.post h2 a {
     font-size: 4.8em;
     font-weight: bold;
     line-height: 1.2;
@@ -223,44 +223,44 @@ header h4 {
     display: block;
 }
 
-#main #content article .post-subtitle {
+#main #content article.post .post-subtitle {
     font-size: 2.4em;
     line-height: 1.2;
     padding-bottom: 15px;
     width: 100%;
 }
 
-#main #content article .social-icons {
+#main #content article.post .social-icons {
     width: 100%;
     margin-bottom: 17px;
     float: left;
 }
 
-#main #content article .social-icons li {
+#main #content article.post .social-icons li {
     margin-right: 5px;
     float: left;
 }
 
-#main #content article .social-icons li a {
+#main #content article.post .social-icons li a {
     width: 24px;
     height: 24px;
     background: url('../images/social-icons-sprite.jpg') no-repeat 0 0;
     display: block;
 }
 
-#main #content article .social-icons li a.pintrest {
+#main #content article.post .social-icons li a.pintrest {
     background-position: 0 0;
 }
 
-#main #content article .social-icons li a.twitter {
+#main #content article.post .social-icons li a.twitter {
     background-position: -24px 0;
 }
 
-#main #content article .social-icons li a.linkedin {
+#main #content article.post .social-icons li a.linkedin {
     background-position: -48px 0;
 }
 
-#main #content article .social-icons li a.facebook {
+#main #content article.post .social-icons li a.facebook {
     background-position: -72px 0;
 }
 
@@ -320,7 +320,8 @@ body.page #main #content article .text-container.no-image p {
 
 body.page #main #content article figure {
     width: 470px;
-    text-align: right;
+    height: 673px;
+    background-color: #F4F4F4;
     float: right;
 }
 
@@ -332,11 +333,46 @@ body.page #main #content article figcaption {
     float: right;
 }
 
+/* Infinite Scroll Loading
+-------------------------------------------------------------- */
+#main #content .pagination {
+    display: none;
+}
+
+#main #content #infscr-loading {
+    margin-top: 20px;
+    width: 100%;
+    height: 32px;
+    position: relative;
+    float: left;
+}
+
+#main #content #infscr-loading img {
+    width: 32px;
+    height: 32px;
+/*    padding-left: 50%;*/
+    position: absolute;
+    left: 48%;
+}
+
+#main #content #infscr-loading div {
+    font-size: 1.4em;
+    color: #666666;
+    padding-top: 10px;
+    text-align: center;
+}
+
 /* Category and Tags ---- Browse
 -------------------------------------------------------------- */
 body.category-browse #main #content,
 body.tag #main #content {
     width:100%;
+}
+
+body.category-browse #main #content #articles,
+body.tag #main #content #articles {
+    width: 100%;
+    margin-right: 0;
 }
 
 #main #content .browse-filters {
@@ -358,7 +394,7 @@ body.tag #main #content {
 }
 
 #main #content .browse-filters .tag-list li {
-    margin-right: 10px;
+    margin: 0 10px 10px 0;
     float: left;
 }
 
