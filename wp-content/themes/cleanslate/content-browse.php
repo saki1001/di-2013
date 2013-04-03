@@ -7,7 +7,7 @@
  */
 ?>
     
-<ul class="browse-posts">
+<div id="articles" class="browse-posts">
     <?php
         $i = 0;
         
@@ -19,13 +19,13 @@
               $class = 'column';
             endif;
     ?>
-            <li class="<?php echo $class; ?>">
+            <article class="thumb <?php echo $class; ?>">
                 <?php
                     get_template_part( 'content-thumb-square', get_post_format() );
                 ?>
-            </li>
+            </article>
     <?php
         $i++;
         endwhile;
     ?>
-</ul>
+</div>
