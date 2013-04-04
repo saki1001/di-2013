@@ -4,12 +4,12 @@ $j(document).ready(function() {
     
     var ajaxRequest = function(postDate) {
         $j.ajax({
-            type: "GET",
-            url: "wp-content/themes/cleanslate/php/get-adjacent-post.php",
+            type: 'GET',
+            url: 'wp-content/themes/cleanslate/php/get-adjacent-post.php',
             data: {
                 post_date : postDate
             },
-            dataType: "html",
+            dataType: 'html',
             beforeSend: function(){
             },  
             success: function(data){
@@ -18,7 +18,7 @@ $j(document).ready(function() {
                 
             },  
             error: function(jqXHR, textStatus, errorThrown) {
-                alert(jqXHR + " :: " + textStatus + " :: " + errorThrown);
+                alert(jqXHR + ' :: ' + textStatus + ' :: ' + errorThrown);
             }
         });
         
@@ -38,7 +38,7 @@ $j(document).ready(function() {
         return false;
     };
     
-    $j("#prev-link").live('click', getAdjacentPost);
-    $j("#next-link").live('click', getAdjacentPost);
+    $j('#prev-link').live('click', getAdjacentPost);
+    $j('#next-link').live('click', getAdjacentPost);
     
 });
