@@ -621,8 +621,7 @@ a img {
     border: none;
 }
 p img {
-/*    margin-bottom: 0.5em;*/
-/* a small bottom margin prevents content floating under images */
+    margin-bottom: 0.5em; /* a small bottom margin prevents content floating under images */
 }
 /*
 Resize images to fit the main content area.
