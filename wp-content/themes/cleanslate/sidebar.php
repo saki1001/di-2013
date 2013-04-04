@@ -31,7 +31,7 @@
                 if ($next_post):
             ?>
                 <li class="next">
-                    <a id="next-link" href="#" data-post-date="<?php echo $next_post->post_date; ?>">></a>
+                    <a id="next-link" href="#" data-post-date="<?php echo $next_post->post_date; ?>"></a>
                 </li>
             <?php
                 // END Next Post Link Conditional
