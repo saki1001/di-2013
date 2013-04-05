@@ -84,6 +84,10 @@ header h4 {
     margin-bottom: 10px;
 }
 
+#main #content article.post .social-icons li {
+    margin-right: 3px;
+}
+
 #main #content .text-container img {
     max-width: 392px;
 }
@@ -118,6 +122,10 @@ body.page #main #content article .text-container p {
 }
 
 body.page #main #content article figure {
+    display: none;
+}
+
+/*body.page #main #content article figure {
     width: 400px;
     height: 572px;
 }
@@ -125,7 +133,7 @@ body.page #main #content article figure {
 body.page #main #content article figcaption {
     width: 400px;
     margin: 10px 0 15px;
-}
+}*/
 
 /* Infinite Scroll Loading
 -------------------------------------------------------------- */
@@ -208,6 +216,12 @@ body.page #main #content article figcaption {
     display: none
 }
 
+/* Infinite Scroll Loading
+-------------------------------------------------------------- */
+.category-news #main #content #infscr-loading {
+    width: 400px;
+}
+
 /* Content No Found
 -------------------------------------------------------------- */
 
@@ -216,10 +230,10 @@ body.page #main #content article figcaption {
 
 /* Footer
 -------------------------------------------------------------- */
-#footer {
+#footer-content {
     width: 400px;
 }
 
-#footer-content {
-    width: 400px;
+#footer-content #footer-logo {
+    display: none;
 }
