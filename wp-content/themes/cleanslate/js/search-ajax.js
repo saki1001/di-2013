@@ -1,5 +1,3 @@
-var $j = jQuery.noConflict();
-
 $j(document).ready(function() {
     
     // Bind the submit event for your form
@@ -36,5 +34,6 @@ $j(document).ready(function() {
         
     };
     
+    $j('#s').bind('focus', clearOnFocus);
     $j('#s').bind('keypress', submitSearch);
 });
