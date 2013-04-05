@@ -737,6 +737,7 @@ img.alignright {
     background-color: #FE6702;
     position: fixed;
     bottom: 0;
+    z-index: 1000;
 }
 
 #footer-content {
