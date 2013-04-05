@@ -36,7 +36,7 @@
         </ul>
         
         <div id="footer-logo">
-            <h4>Holland: Pioneers in international business</h4>
+            <h4>Pioneers in international business</h4>
         </div>
     </div>
 </footer><!-- #footer -->
