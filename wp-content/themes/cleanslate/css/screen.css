@@ -42,7 +42,7 @@ body {
     height: auto !important;
     height: 100%;
     position: relative;
-    margin: 0 auto -185px; /* the bottom margin is the negative value of the footer's height */;
+    margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */;
     padding: 0 30px;
 }
 
@@ -52,7 +52,7 @@ http://ryanfait.com/
 */
 
 #footer, .push {
-    height: 185px; /* .push must be the same height as .footer */
+    height: 50px; /* .push must be the same height as .footer */
 }
 
 .push {
@@ -97,9 +97,13 @@ header,
 a, a:link, a:visited {
     color: #FE6702;
     text-decoration: none;
+    -webkit-transition: color .25s ease-in-out;
+       -moz-transition: color .25s ease-in-out;
+            transition: color .25s ease-in-out;
 }
 
 a:active, a:hover {
+    color: #000000;
     text-decoration: none;
 }
 
@@ -182,7 +186,6 @@ header h4 {
 
 #main-menu a {
     font-weight: bold;
-    color: #FC6604;
     display: block;
     margin-left: 27px;
     text-decoration: none;
@@ -193,7 +196,10 @@ header h4 {
 -------------------------------------------------------------- */
 #main #content {
     width: 100%;
-    margin-bottom: 25px;
+    padding-bottom: 42px;
+    margin-bottom: 20px;
+    opacity: 0; /*shown on fadein*/
+    position: relative;
 }
 
 #main #content #articles {
@@ -262,6 +268,22 @@ header h4 {
 
 #main #content article.post .social-icons li a.facebook {
     background-position: -72px 0;
+}
+
+#main #content article.post .social-icons li a.pintrest:hover {
+    background-position: 0 -48px;
+}
+
+#main #content article.post .social-icons li a.twitter:hover {
+    background-position: -24px -48px;
+}
+
+#main #content article.post .social-icons li a.linkedin:hover {
+    background-position: -48px -48px;
+}
+
+#main #content article.post .social-icons li a.facebook:hover {
+    background-position: -72px -48px;
 }
 
 #main #content .text-container img {
@@ -341,17 +363,22 @@ body.page #main #content article figcaption {
 }
 
 #main #content #infscr-loading {
-    margin-top: 20px;
     width: 100%;
     height: 32px;
-    position: relative;
-    float: left;
+    margin:0;
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.category-news #main #content #infscr-loading {
+    width: 550px;
 }
 
 #main #content #infscr-loading img {
     width: 32px;
     height: 32px;
-/*    padding-left: 50%;*/
     position: absolute;
     left: 48%;
 }
@@ -361,6 +388,7 @@ body.page #main #content article figcaption {
     color: #666666;
     padding-top: 10px;
     text-align: center;
+    font-style: italic;
 }
 
 /* Category and Tags ---- Browse
@@ -403,10 +431,16 @@ body.tag #main #content #articles {
     font-weight: bold;
     font-size: 1.4em;
     color: #FFFFFF;
+    -webkit-transition: color .35s ease-in-out;
+       -moz-transition: color .35s ease-in-out;
+            transition: color .35s ease-in-out;
     text-transform: uppercase;
     padding: 11px 13px;
     border: solid 4px #000000;
     background-color: #000000;
+    -webkit-transition: background-color .35s ease-in-out;
+       -moz-transition: background-color .35s ease-in-out;
+            transition: background-color .35s ease-in-out;
     display: block;
 }
 
@@ -427,8 +461,16 @@ body.tag #main #content #articles {
     color: #AEAEAE;
     width: 185px;
     border: solid 1px #999999;
+    -webkit-transition: border .25s ease-in-out;
+       -moz-transition: border .25s ease-in-out;
+            transition: border .25s ease-in-out;
     background: none;
     padding: 14px 8px 12px 35px;
+}
+
+#main #content .browse-filters #searchform input[type="text"]:focus {
+    border: solid 1px #000000;
+    color: #000000;
 }
 
 #main #content .browse-posts {
@@ -452,6 +494,14 @@ body.tag #main #content #articles {
     width: 222px;
     height: 222px;
     border: 4px solid #000000;
+    opacity: 1;
+    color: #FFFFFF;
+    -webkit-transition: opacity .35s ease-in-out;
+       -moz-transition: opacity .35s ease-in-out;
+            transition: opacity .35s ease-in-out;
+    -webkit-background-size: 222px 222px !important;
+       -moz-background-size: 222px 222px !important;
+            background-size: 222px 222px !important;
 }
 
 #main #content .browse-posts .thumb a:hover {
@@ -513,11 +563,19 @@ body.tag #main #content #articles {
     height: 10px;
     margin-top: 4px;
     display: block;
-    background: url('../images/arrows-sprite.jpg') no-repeat 0 0;
+    background: url('../images/arrows-sprite.png') no-repeat 0 0;
 }
 
 #main #sidebar .post-date-nav .next a {
     background-position: -10px 0;
+}
+
+#main #sidebar .post-date-nav .prev a:hover {
+    background-position: 0 -10px;
+}
+
+#main #sidebar .post-date-nav .next a:hover {
+    background-position: -10px -10px;
 }
 
 #main #sidebar .post-summary {
@@ -586,14 +644,22 @@ body.tag #main #content #articles {
     margin-bottom: 20px;
 }
 
-#main #sidebar.featured figure {
-    margin-bottom: 10px;
+#main #sidebar.featured .thumb a {
+    display: block;
+    opacity: 1;
+    -webkit-transition: opacity .35s ease-in-out;
+       -moz-transition: opacity .35s ease-in-out;
+            transition: opacity .35s ease-in-out;
 }
 
-#main #sidebar.featured figure a {
+#main #sidebar.featured .thumb a:hover {
+    opacity: 0.65;
+}
+
+#main #sidebar.featured figure {
     width: 335px;
     height: 187px;
-    display: block;
+    margin-bottom: 10px;
 }
 
 #main #sidebar.featured figcaption .post-date {
@@ -605,6 +671,7 @@ body.tag #main #content #articles {
 #main #sidebar.featured figcaption .post-title {
     font-size: 1.8em;
     font-weight: bold;
+    color: #000000;
 }
 
 /* Content No Found
@@ -668,11 +735,13 @@ img.alignright {
     text-align: right;
     font-size: 1.6em;
     background-color: #FE6702;
+    position: fixed;
+    bottom: 0;
 }
 
 #footer-content {
     width: 950px;
-    height: 185px;
+    padding: 10px 0;
     margin: 0 auto;
     text-align: right;
     background-color: #FE6702;
@@ -681,7 +750,6 @@ img.alignright {
 }
 
 #footer form {
-    margin-top: 20px;
     float: left;
 }
 
@@ -695,7 +763,7 @@ img.alignright {
 }
 
 #footer .social-icons {
-    margin: 24px 0 0 10px;
+    margin: 3px 0 0 10px;
     float: left;
 }
 
@@ -711,6 +779,10 @@ img.alignright {
     display: block;
 }
 
+#footer .social-icons li a.facebook {
+    background-position: -72px -24px;
+}
+
 #footer .social-icons li a.pintrest {
     background-position: 0 -24px;
 }
@@ -723,18 +795,32 @@ img.alignright {
     background-position: -48px -24px;
 }
 
-#footer .social-icons li a.facebook {
-    background-position: -72px -24px;
+#footer .social-icons li a.facebook:hover {
+    background-position: -72px -72px;
+}
+
+#footer .social-icons li a.pintrest:hover {
+    background-position: 0 -72px;
+}
+
+#footer .social-icons li a.twitter:hover {
+    background-position: -24px -72px;
+}
+
+#footer .social-icons li a.linkedin:hover {
+    background-position: -48px -72px;
 }
 
 #footer #footer-logo {
-    width: 192px;
-    height: 162px;
-    margin-top: 20px;
+    width: 270px;
+    height: 31px;
     background: url('../images/holland-logo.png') no-repeat 0 0;
     float: right;
 }
 
 #footer #footer-logo h4 {
-    display: none;
+    color: #FFFFFF;
+    font-size: 0.7em;
+    margin: 12px 0 0 95px;
+    text-align: right;
 }
