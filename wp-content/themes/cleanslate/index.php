@@ -13,18 +13,24 @@
         
         <?php
             if ( have_posts() ) :
+                
+                while ( have_posts() ) : the_post();
+                    get_sidebar();
+                endwhile;
+                
+                rewind_posts();
         ?>
-                <div id="articles">
-                
-                <?php
-                    
-                    while ( have_posts() ) : the_post();
-                        get_template_part( 'content', get_post_format() );
-                    endwhile;
-                    
-                ?>
-                
-                </div>
+        
+        <div id="articles">
+        
+        <?php
+                while ( have_posts() ) : the_post();
+                    get_template_part( 'content', get_post_format() );
+                endwhile;
+        ?>
+        
+        </div>
+        
         <?php
             else :
             // Content Not Found Template
@@ -32,9 +38,6 @@
             
             endif;
         ?>
-        
-        <?php get_sidebar(); ?>
-        
     </section>
     
 <?php get_footer(); ?>
