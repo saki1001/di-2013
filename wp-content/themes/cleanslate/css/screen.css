@@ -486,7 +486,7 @@ body.tag #main #content #articles {
 #main #content .browse-posts .thumb figcaption h4 {
     font-size: 1.9em;
     font-weight: bold;
-    padding: 20px 0 0 20px;
+    padding: 20px 20px 0 20px;
 }
 
 #main #content .browse-posts .thumb figcaption p {
