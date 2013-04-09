@@ -15,7 +15,7 @@ header,
 -------------------------------------------------------------- */
 header {
     position: relative;
-    padding: 10px 0 12px;
+    padding: 10px 0 18px;
 }
 
 header #logo {
@@ -39,14 +39,18 @@ header h4 {
 
 #main-menu {
     font-size: 2.3em;
-    padding: 12px 0;
+    padding: 15px 0;
     margin: 10px 0 0 0;
     text-align: center;
     width: 400px;
 }
 
 #main-menu h3 {
-    display: none;
+/*    display: none;*/
+    width: 100%;
+    border-bottom: solid 1px #000000;
+    margin-bottom: 15px;
+    padding-bottom: 12px;
 }
 
 #main-menu .menu-main-container {
@@ -77,11 +81,11 @@ header h4 {
 
 #main #content article.post .post-subtitle {
     font-size: 2.2em;
-    padding-bottom: 5px;
+    padding-bottom: 8px;
 }
 
 #main #content article.post .social-icons {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 #main #content article.post .social-icons li {
@@ -151,7 +155,7 @@ body.page #main #content article figcaption {
 
 #main #content .browse-filters #searchform {
     width: 400px;
-    margin-bottom: 12px;
+    margin: 5px 0 12px;
     float: left;
 }
 
@@ -164,30 +168,35 @@ body.page #main #content article figcaption {
     float: left;
 }
 
-#main #content .browse-posts .column {
+#main #content .browse-posts .column,
+#main #content .browse-posts .column.first {
+    margin: 0 10px 10px 0;
+}
+
+#main #content .browse-posts .column.odd {
     margin: 0 0 10px 0;
 }
 
 #main #content .browse-posts .thumb a {
-    width: 392px;
-    height: 392px;
-    -webkit-background-size: 100% !important;
-            background-size: 100% !important;
+    width: 187px;
+    height: 187px;
+    -webkit-background-size: cover !important;
+            background-size: cover !important;
 }
 
 #main #content .browse-posts .thumb figcaption {
-    width: 392px;
-    height: 392px;
+    width: 187px;
+    height: 187px;
 }
 
 #main #content .browse-posts .thumb figcaption h4 {
-    font-size: 2.5em;
-    padding: 30px 0 0 30px;
+    font-size: 1.9em;
+    padding: 15px 15px 0 15px;
 }
 
 #main #content .browse-posts .thumb figcaption p {
-    font-size: 2em;
-    padding: 10px 0 0 30px;
+    font-size: 1.4em;
+    padding: 8px 0 0 15px;
 }
 
 
@@ -201,7 +210,28 @@ body.page #main #content article figcaption {
 /* Sidebar - Homepage
 -------------------------------------------------------------- */
 #main #sidebar .post-date-nav {
-    margin-bottom: 0;
+    margin: 8px 0 20px;
+    width: 100%;
+    position: relative;
+}
+
+#main #sidebar .post-date-nav li.prev,
+#main #sidebar .post-date-nav li.next {
+    width: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+}
+
+#main #sidebar .post-date-nav li.prev {
+    right: 30px;
+}
+
+#main #sidebar .post-date-nav li.post-date {
+    width: 360px;
+    margin-right: 40px;
+    font-size: 2em;
 }
 
 #main #sidebar .post-summary,
