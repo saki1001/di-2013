@@ -14,12 +14,16 @@
         while ( have_posts() ) : the_post();
             
             if( $i % 4 == 0 ) :
-              $class = 'column first';
+                // test for every fourth item
+                $class = 'first';
+            elseif( $i & 1 ) :
+                // test if odd with bitwise operator
+                $class = 'odd';
             else :
-              $class = 'column';
+                $class = '';
             endif;
     ?>
-            <article class="thumb <?php echo $class; ?>">
+            <article class="thumb column <?php echo $class; ?>">
                 <?php
                     get_template_part( 'content-thumb-square', get_post_format() );
                 ?>
