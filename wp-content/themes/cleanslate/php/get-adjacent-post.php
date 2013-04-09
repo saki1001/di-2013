@@ -38,6 +38,14 @@
     $the_query = new WP_Query( $args );
     ?>
     
+    <?php
+        while ( $the_query->have_posts() ) : $the_query->the_post();
+            get_sidebar();
+        endwhile;
+        
+        rewind_posts();
+    ?>
+    
     <div id="articles">
     
     <?php
@@ -49,7 +57,5 @@
     ?>
     
     </div>
-    
-    <?php get_sidebar(); ?>
     
 <?php wp_reset_query(); ?>
