@@ -25,7 +25,6 @@ var fadeOutPage = function(redirect, turl) {
 };
 
 $j(document).ready(function(){
-    
     // Decide how to fade out content
     var fadeOutRedirect = function(){
         
@@ -38,6 +37,9 @@ $j(document).ready(function(){
         } else if ( turl === '#' ) {
             // all animation performed in load-adjacent-post.js
             // NO RETURN FALSE, needs to perform AJAX
+            
+        } else if ( $j(this).attr('target') === '_blank' ) {
+            // do nothing
             
         } else {
             var redirect = true;
