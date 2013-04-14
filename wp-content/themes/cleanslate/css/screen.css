@@ -139,10 +139,13 @@ header h1 {
 }
 
 header h1 a {
-    opacity: 0;
     display: block;
     width: 324px;
     height: 112px;
+}
+
+header h1 a span {
+    visibility: hidden;
 }
 
 header h4 {
@@ -761,6 +764,8 @@ img.alignright {
     width: 200px;
     border: none;
     padding: 8px 6px 6px;
+    margin-right: 10px;
+    float: left;
 }
 
 #footer .social-icons {
