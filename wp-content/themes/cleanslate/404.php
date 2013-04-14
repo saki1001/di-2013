@@ -7,7 +7,9 @@
  */
 
 get_header(); ?>
-
-<?php include('content-not-found.php'); ?>
-
+    
+    <section id="content" role="main">
+        <?php include('content-not-found.php'); ?>
+    </section>
+    
 <?php get_footer(); ?>
