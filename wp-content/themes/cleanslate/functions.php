@@ -5,6 +5,56 @@
  * @package CleanSlate
  * @since CleanSlate 0.1
  */
+ if ( ! function_exists( 'cleanslate_setup' ) ):
+ /**
+  * Sets up theme defaults and registers support for various WordPress features.
+  *
+  * Note that this function is hooked into the after_setup_theme hook, which runs
+  * before the init hook. The init hook is too late for some features, such as indicating
+  * support post thumbnails.
+  *
+  * To override cleanslate_setup() in a child theme, add your own cleanslate_setup to your child theme's
+  * functions.php file.
+  */
+ function cleanslate_setup() {
+     /**
+      * Add default posts and comments RSS feed links to head
+      */
+     add_theme_support( 'automatic-feed-links' );
+     
+     /**
+      * This theme uses wp_nav_menu() in one location.
+      */
+     register_nav_menus( array(
+         'primary' => __( 'Primary Menu', 'cleanslate' ),
+     ) );
+     
+     /**
+      * Add support for the Gallery and Video Post Formats
+      */
+     // add_theme_support( 'post-formats', array( 'gallery' ) );
+ }
+ endif; // cleanslate_setup
+
+ /**
+  * Tell WordPress to run cleanslate_setup() when the 'after_setup_theme' hook is run.
+  */
+ add_action( 'after_setup_theme', 'cleanslate_setup' );
+
+ /**
+  * Register widgetized area and update sidebar with default widgets
+  */
+
+ if ( function_exists ('register_sidebar')) { 
+     // register_sidebar( array(
+     //     'name' => __( 'cat-posts' ),
+     //     'id' => 'cat-posts'
+     // ) );
+     
+     register_sidebar();
+ }
+ add_action( 'init', 'cleanslate_widgets_init' );
+
 
 function register_jquery() {
     wp_enqueue_script( 'jquery' );
