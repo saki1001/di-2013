@@ -1,22 +1,15 @@
 $j(document).ready(function() {
     
     var submitSearch = function(value) {
-        // Make sure the user searched for something
-        // if ( value ){
-        //     
-        //     $j.get( '/', { s: value }, function( data ){
-        //     
-        //         // Place the fetched results inside the #content element
-        //         $j('.browse-posts').html(data);
-        //     });
-        // }
         
-        $j.get(search.php,{search_string:value},
-            function(data){
-                if(data.length>0){
-                    $j('.browse-posts').html(data);
-                }
-        });
+        // Make sure the field isn't empty
+        if (value =! '') {
+            
+            $j('#searchform').submit();
+            
+        } else {
+            // do nothing
+        }
     };
     
     var submitNewsletter = function(value) {
@@ -30,7 +23,6 @@ $j(document).ready(function() {
             // do nothing
         }
         
-
     };
     
     
@@ -44,8 +36,7 @@ $j(document).ready(function() {
             // Get the input value
             var value = $j(this).val();
             var thisID = $j(this).attr('id');
-            console.log(thisID);
-            console.log(value);
+            
             if (thisID === 's') {
                 submitSearch(value);
                 
