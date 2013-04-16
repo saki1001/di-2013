@@ -25,16 +25,16 @@
     
     <ul class="social-icons">
         <li>
-            <a href="#" class="pintrest" title="Share with Pintrest."></a>
+            <a href="http://pinterest.com/pin/create/button/?url=<?php the_permalink(); ?><?php echo (has_post_thumbnail() ? '&media=' . wp_get_attachment_url( get_post_thumbnail_id($post->ID) ) : ''); ?>&description=<?php echo urlencode(get_the_title()); ?>" class="pintrest" title="Pin It" target="_blank"></a>
         </li>
         <li>
-            <a href="#" class="twitter" title="Share with Twitter."></a>
+            <a href="http://twitter.com/intent/tweet?text=<?php echo urlencode(get_the_title()) . ' ' . get_permalink($post->ID); ?>" class="twitter" title="Tweet this" target="_blank"></a>
         </li>
         <li>
-            <a href="#" class="facebook" title="Share with Facebook."></a>
+            <a href="http://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" class="facebook" title="Share on Facebook." target="_blank"></a>
         </li>
         <li>
-            <a href="#" class="linkedin" title="Share with LinkedIn."></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>" class="linkedin" title="Share on LinkedIn." target="_blank"></a>
         </li>
     </ul>
     
