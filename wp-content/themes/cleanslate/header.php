@@ -46,6 +46,9 @@
         <?php wp_head(); ?>
         
         <?php /*Custom JS Files*/ ?>
+            <script type="text/javascript">
+                var templateDirectoryUrl = '<?php echo get_template_directory_uri(); ?>';
+            </script>
             <script src="<?php echo get_template_directory_uri(); ?>/js/main.js" type="text/javascript"></script>
             <script src="<?php echo get_template_directory_uri(); ?>/js/forms.js" type="text/javascript"></script>
         <?php
