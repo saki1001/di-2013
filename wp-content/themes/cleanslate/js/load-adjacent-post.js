@@ -6,7 +6,7 @@ $j(document).ready(function() {
         
         $j.ajax({
             type: 'GET',
-            url: 'wp-content/themes/cleanslate/php/get-adjacent-post.php',
+            url: templateDirectoryUrl + '/php/get-adjacent-post.php',
             data: {
                 post_date : postDate
             },
