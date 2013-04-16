@@ -257,6 +257,7 @@ header h4 {
     display: block;
 }
 
+/*Social Media Icons*/
 #main #content article.post .social-icons li a.pintrest {
     background-position: 0 0;
 }
@@ -265,14 +266,15 @@ header h4 {
     background-position: -24px 0;
 }
 
-#main #content article.post .social-icons li a.linkedin {
+#main #content article.post .social-icons li a.facebook {
     background-position: -48px 0;
 }
 
-#main #content article.post .social-icons li a.facebook {
+#main #content article.post .social-icons li a.linkedin {
     background-position: -72px 0;
 }
 
+/*Social Media Icons -- Hover*/
 #main #content article.post .social-icons li a.pintrest:hover {
     background-position: 0 -48px;
 }
@@ -281,11 +283,11 @@ header h4 {
     background-position: -24px -48px;
 }
 
-#main #content article.post .social-icons li a.linkedin:hover {
+#main #content article.post .social-icons li a.facebook:hover {
     background-position: -48px -48px;
 }
 
-#main #content article.post .social-icons li a.facebook:hover {
+#main #content article.post .social-icons li a.linkedin:hover {
     background-position: -72px -48px;
 }
 
@@ -747,6 +749,7 @@ img.alignright {
     width: 950px;
     padding: 10px 0;
     margin: 0 auto;
+    height: 50px;
     text-align: right;
     background-color: #FE6702;
     position: relative;
@@ -785,10 +788,7 @@ img.alignright {
     display: block;
 }
 
-#footer .social-icons li a.facebook {
-    background-position: -72px -24px;
-}
-
+/*Social Media Icons*/
 #footer .social-icons li a.pintrest {
     background-position: 0 -24px;
 }
@@ -797,14 +797,15 @@ img.alignright {
     background-position: -24px -24px;
 }
 
-#footer .social-icons li a.linkedin {
+#footer .social-icons li a.facebook {
     background-position: -48px -24px;
 }
 
-#footer .social-icons li a.facebook:hover {
-    background-position: -72px -72px;
+#footer .social-icons li a.linkedin {
+    background-position: -72px -24px;
 }
 
+/*Social Media Icons -- Hover*/
 #footer .social-icons li a.pintrest:hover {
     background-position: 0 -72px;
 }
@@ -813,8 +814,12 @@ img.alignright {
     background-position: -24px -72px;
 }
 
-#footer .social-icons li a.linkedin:hover {
+#footer .social-icons li a.facebook:hover {
     background-position: -48px -72px;
+}
+
+#footer .social-icons li a.linkedin:hover {
+    background-position: -72px -72px;
 }
 
 #footer #footer-logo {
