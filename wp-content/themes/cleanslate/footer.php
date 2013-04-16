@@ -30,16 +30,16 @@
         
         <ul class="social-icons">
             <li>
-                <a href="http://pinterest.com/pin/create/button/?url=<?php echo $site_url ?>&media=<?php echo get_template_directory_uri(); ?>/images/dutch-innovation-logo.png&description=Your%20daily%20dose%20of%20%20innovation." title="Pin It" /></a>
+                <a href="http://pinterest.com/pin/create/button/?url=<?php echo site_url(); ?>&media=<?php echo get_template_directory_uri(); ?>/images/dutch-innovation-logo.png&description=<?php echo urlencode(get_bloginfo('description')); ?>" class="pintrest" title="Pin It" target="_blank"></a>
             </li>
             <li>
-                <a href="http://twitter.com/intent/tweet?text=Your%20daily%20dose%20of%20Dutch%20Innovation&url=?php echo $site_url ?>" class="twitter" title="Tweet this"></a>
+                <a href="http://twitter.com/intent/tweet?text=<?php echo urlencode(get_bloginfo('description')) . ' ' . site_url(); ?>" class="twitter" title="Tweet this" target="_blank"></a>
             </li>
             <li>
-                <a href="http://www.facebook.com/sharer/sharer.php?u=<?php echo $site_url ?>" class="facebook" title="Share on Facebook."></a>
+                <a href="http://www.facebook.com/sharer/sharer.php?u=<?php echo site_url(); ?>" class="facebook" title="Share on Facebook." target="_blank"></a>
             </li>
             <li>
-                <a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo $site_url ?>" class="linkedin" title="Share on LinkedIn."></a>
+                <a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo site_url(); ?>" class="linkedin" title="Share on LinkedIn." target="_blank"></a>
             </li>
         </ul>
         
