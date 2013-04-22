@@ -16,14 +16,10 @@
 <footer id="footer" role="contentinfo">
     <div id="footer-content">
         
-        <!-- <form id="newsletter-form">
-          <input name="newsletter" type="email" placeholder="Newsletter signup..." />
-        </form> -->
-        
         <!-- Begin MailChimp Signup Form -->
         <div id="mc_embed_signup">
-        <form action="http://sakisato.us5.list-manage.com/subscribe/post?u=63744d3b2ea40a81b53a5d119&amp;id=552f7e1d30" method="post" id="newsletter-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-            <input type="email" value="" name="EMAIL" class="email" id="n" placeholder="Newsletter Signup..." required>
+        <form action="http://dailydutchinnovation.us4.list-manage.com/subscribe/post?u=681f40249b5ede2e353e319bc&amp;id=0237f13bbd" method="post" id="newsletter-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <input type="email" value="Newsletter Signup..." name="EMAIL" class="email" id="n" placeholder="Newsletter Signup..." required>
         </form>
         </div>
         <!--End mc_embed_signup-->
